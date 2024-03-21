@@ -127,10 +127,10 @@ def get_birthday(birthday, year, today):
  
 def get_daily_love():
     #每日一句情话
-    url = "https://api.vvhan.com/api/love?type=json"
+    url = "https://api.vvhan.com/api/text/love?type=json"
     r = requests.get(url)
     all_dict = json.loads(r.text)
-    sentence = all_dict['ishan']
+    sentence = all_dict['content']
     daily_love = sentence
     return daily_love
  
