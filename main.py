@@ -130,7 +130,7 @@ def get_daily_love():
     url = "https://api.vvhan.com/api/text/love?type=json"
     r = requests.get(url)
     all_dict = json.loads(r.text)
-    sentence = all_dict['content']
+    sentence = all_dict['data']['content']
     daily_love = sentence
     return daily_love
  
